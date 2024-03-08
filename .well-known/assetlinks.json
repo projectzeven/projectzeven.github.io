@@ -1,0 +1,8 @@
+{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.projectzeven.ab",
+    "sha256_cert_fingerprints": ["B5:B4:0C:36:87:C1:1B:74:02:90:18:14:D8:52:F9:45:62:81:BC:F4:A1:AD:23:07:66:3E:2D:A0:06:10:99:1D"]
+  }
+}
