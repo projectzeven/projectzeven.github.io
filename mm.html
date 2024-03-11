@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Id</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background-color: #001F3F;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .card {
+      background-color: #E8E9E4;
+      border-radius: 20px;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      width: 100%;
+      max-width: 260px;
+      text-align: center;
+    }
+    .text {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      margin: 0px;
+    }
+    .button-container {
+      width: 100%;
+      max-width: 300px;
+    }
+    .button {
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 10px;
+      width: 100%;
+      box-shadow: 0 10px 10px rgba(255, 255, 255, 0.5);
+
+      font-size: 18px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .button:active {
+      transform: scale(0.95);
+    }
+    .footer-container {
+      width: 100%;
+      max-width: 400px;
+      margin-top: 20px;
+    }
+    .footer {
+      font-size: 16px;
+      color: #555;
+      padding: 10px;
+      text-align: center;
+    }
+  
+    /* Media query for smaller screens */
+    @media screen and (max-width: 480px) {
+      .text {
+        font-size: 16px;
+      }
+      .button {
+        font-size: 16px;
+      }
+      .footer {
+        font-size: 14px;
+      }
+    }
+    @font-face {
+    font-family: 'CustomFont';
+    src: url(font/tgi.ttf) format('truetype');
+  }
+
+  /* Apply the custom font to the card text and button */
+  .card, .button {
+    font-family: 'CustomFont', sans-serif;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="text">ကစားရန် အောက်ပါ ခလုတ်ကို ‌</div>
+      <div class="text">သုံးချက် ဆက်တိုက် နှိပ်ပါ။</div>
+    </div>
+    <div class="button-container">
+      <button id="actionButton" class="button">Button | ခလုတ်</button>
+    </div>
+    <div class="footer-container">
+      <div class="footer">
+        This domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Variables to track the button clicks
+    let clickCount = 0;
+    let clickTimer;
+
+    // Function to handle the button click
+    function handleButtonClick() {
+      clickCount++;
+      clearTimeout(clickTimer);
+      clickTimer = setTimeout(resetClickCount, 2000); // Reset clickCount after 2 seconds
+
+      if (clickCount === 3) {
+        window.location.href = "links/index.html"; // Redirect to Cont.html
+      }
+    }
+
+    // Function to reset the click count
+    function resetClickCount() {
+      clickCount = 0;
+    }
+
+    // Add event listener to the button
+    const button = document.getElementById("actionButton");
+    button.addEventListener("click", handleButtonClick);
+  </script>
+</body>
+</html>
