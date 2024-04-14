@@ -41,6 +41,27 @@
                 background-position: 0% 50%;
             }
         }
+
+        /* Style for the new button */
+        button#playButton {
+            font-family: 'MyanmarAngoun', sans-serif;
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            padding: 20px 40px; /* Larger padding */
+            font-size: 20px; /* Larger font size */
+            border: none; /* No border */
+            border-radius: 10px; /* Rounded corners */
+            cursor: pointer; /* Cursor style */
+            display: block; /* Make it a block element */
+            margin: 0 auto; /* Center the button horizontally */
+            margin-top: 20px; /* Add some top margin */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        /* Change the button color on hover */
+        button#playButton:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body class="bg-light">
@@ -69,7 +90,7 @@
                         <img src="M.png" width="100%" alt="Messenger">
                     </a>
                     <br><br>
-                    <button onclick="redirectToGame()" style="font-family: 'MyanmarAngoun', sans-serif;">အခုပဲကစားမည်</button>
+                    <button id="playButton" onclick="redirectToGame()">အခုပဲကစားမည်</button>
                 </p>
 
 
